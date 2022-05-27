@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+}
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+a {
+   color: inherit;
+}
+a,
+a:visited,
+a:hover {
+   text-decoration: none;
+}
+a:focus,
+a:active {
+   outline: none;
+}
+:focus,
+:active {
+   outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   font-size: inherit;
+   font-weight: inherit;
+   line-height: inherit;
+}
+p + p {
+   margin-top: 1em;
+}
+ul {
+   list-style: none;
+}
+img,
+svg {
+   vertical-align: top;
+   max-width: 100%;
+   height: auto;
+}
+input,
+textarea,
+button,
+select {
+   font-family: inherit;
+   font-size: inherit;
+}
+input::-ms-clear {
+   display: none;
+}
+button,
+input[type="submit"] {
+   display: inline-block;
+   box-shadow: none;
+   background-color: transparent;
+   background: none;
+   cursor: pointer;
+}
+input:focus,
+input:active,
+button:focus,
+button:active {
+   outline: none;
+}
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+label {
+   cursor: pointer;
+}
+legend {
+   display: block;
+}
+body {
+   font-family: 'Patrick Hand', cursive;
+}
+.toDo__wrapper {
+   min-width: 100%;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   background: url(../img/image-1.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.toDo__header {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.toDo__title {
+   width: 510px;
+   font-size: 80px;
+   letter-spacing: 7px;
+   font-weight: 700;
+   color: #a1b729;
+   text-shadow: #ffffff 2px 2px 0px, #282828 4px 4px 0px;
+   padding: 20px 60px;
+   border: 5px double #a1b729;
+   border-radius: 10px;
+   text-align: center;
+}
+@media (max-width: 767px) {
+   .toDo__title {
+      width: 300px;
+      font-size: 50px;
+      letter-spacing: 4px;
+      font-weight: 700;
+      padding: 10px 20px;
+   } 
+}
+.toDo__creater {
+   width: 500px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 30px 30px 0px 30px;
+   padding: 20px;
+   background: #f0efea;
+   border-radius: 10px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@media (max-width: 767px) {
+   .toDo__creater {
+      width: 300px;
+      margin: 30px 10px 0px 10px;
+   }
+}
+.creater__input {
+   width: 250px;
+   background: inherit;
+   font-size: 28px;
+   transition: all 0.4s ease-in;
+}
+@media (max-width: 767px) {
+   .creater__input {
+      width: 200px;
+      font-size: 22px;
+   }
+}
+.creater__input:hover {
+   padding-left: 10px;
+}
+.creater__button {
+   font-size: 26px;
+   letter-spacing: 1px;
+   color: #a1b729;
+   font-weight: 600;
+   transition: all 0.4s ease-in-out;
+}
+@media (max-width: 767px) {
+   .creater__button {
+      font-size: 22px;
+   }
+}
+.creater__button:hover {
+   text-decoration: underline;
+}
+.toDo_list {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.list {
+   width: 220px;
+   height: 220px;
+   padding: 18px 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   background: url(../img/antnotes-logo.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.list.checked .list__text {
+   color: #a1b729;
+   text-decoration: line-through;
+}
+.list__delete {
+   position: relative;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   margin-right: 8px;
+}
+.list__delete-hover {
+   position: absolute;
+   font-size: 0px;
+   right: 0px;
+   top: 0px;
+   width: 0px;
+   height: 0px;
+   opacity: 0;
+   transition: all 0.4s ease-in-out;
+}
+.list__delete:hover .list__delete-hover {
+   position: absolute;
+   font-size: 31px;
+   right: -29px;
+   top: -15px;
+   width: 30px;
+   height: 30px;
+   opacity: 1;
+}
+.list__done {
+   margin-top: 12px;
+   margin-bottom: 12px;
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   width: 30%;
+}
+.list__done:hover {
+   transform: scale(1.7);
+}
+.list__done-unchecked {
+   display: inline-block;
+   font-size: 26px;
+   color: #a1b729;
+   cursor: pointer;
+}
+.list.checked .list__done-unchecked {
+   display: none;
+}
+.list__done-checked {
+   display: none;
+}
+.list.checked .list__done-checked {
+   font-size: 26px;
+   color: #da1616;
+   cursor: pointer;
+   display: inline-block;
+}
+.list__text {
+   font-size: 20px;
+   text-transform: capitalize;
+   line-height: 24px;
+   text-align: center;
+}
+.toDo__clear {
+   padding: 10px;
+   border: 2px solid #a1b729;
+   border-radius: 10px;
+   color: #a1b729;
+   transition: all 0.4s ease-in-out;
+   cursor: pointer;
+}
+.toDo__clear:hover {
+   border: 2px solid #da1616;
+   color: #da1616;
+}
+.clear__button {
+   color: inherit;
+   font-size: 30px;
+   font-weight: 600;
+   letter-spacing: 5px;
+}
